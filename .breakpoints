@@ -7,6 +7,14 @@
         "version": 1,
         "index": 40
       }
+    ],
+    "templates/nav.html": [
+      {
+        "id": "f5c21546-8b7d-4f5d-b121-f0658144ed2f",
+        "line": 1,
+        "version": 106,
+        "index": 0
+      }
     ]
   }
 }
