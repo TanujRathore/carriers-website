@@ -21,4 +21,27 @@ def load_jobs_from_db():
     result_dicts.append(dict(zip(column_names,row)))
   return result_dicts
 
+'''
+def load_job_from_db(id):
+  with engine.connect() as conn:
+    result= conn.execute(text(f"SELECT * FROM jobs WHERE id ={id}"))
+    rows = []
+    for row in result.all():
+      rows.append(row._mapping)
+      
+      if len(rows)==0:
+        return None
+      else:
+        return row
+
+'''
+def load_job_from_db(id):
+  with engine.connect() as conn:
+    result = conn.execute(
+       text("SELECT * FROM jobs WHERE id=:val"),{'val':id})
+    row=result.fetchone()
+    return row._asdict()
+    
+    
+
   
