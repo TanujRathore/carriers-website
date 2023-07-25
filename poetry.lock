@@ -7,6 +7,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "cachelib"
+version = "0.10.2"
+description = "A collection of cache libraries in the same API interface."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "click"
 version = "8.1.5"
 description = "Composable command line interface toolkit"
@@ -55,6 +63,18 @@ python-versions = "*"
 [package.dependencies]
 blinker = "*"
 Flask = "*"
+
+[[package]]
+name = "flask-session"
+version = "0.5.0"
+description = "Server-side session support for Flask"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+cachelib = "*"
+flask = ">=2.2"
 
 [[package]]
 name = "greenlet"
@@ -159,14 +179,16 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "31e457c62b2e44c110132f2e3ae156d574f8bcf813f6e2ec941429cd286916ce"
+content-hash = "1bdda071259cc4ee54be1cf69055d54ab08c4aed93f4cc9e7807a66efa384f50"
 
 [metadata.files]
 blinker = []
+cachelib = []
 click = []
 colorama = []
 flask = []
 flask-mail = []
+flask-session = []
 greenlet = []
 itsdangerous = []
 jinja2 = []

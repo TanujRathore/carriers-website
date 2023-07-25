@@ -72,6 +72,7 @@ def add_application_to_db(id , data):
         stmt = stmt.bindparams( resume_url = data['resume_url'])
         conn.execute(stmt)
 
+
                  
 
 
